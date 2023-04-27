@@ -20,34 +20,20 @@ export function getPostSlugs() {
 //     "coverImage",
 //   ]
 
-type PostData = { 
-  title: string
-  slug: string
-  author: Author
-  coverImage: string,
-  date: string,
-  content: string,
-}
+// type PostData = { 
+//   title: string
+//   slug: string
+//   author: Author
+//   coverImage: string,
+//   date: string,
+//   content: string,
+// }
 
-export function getPostBySlug(slug: string, fields: string[] = []): PostData {
+export function getPostBySlug(slug: string, fields: string[] = []): Post {
   const realSlug = slug.replace(/\.md$/, '')
   const fullPath = join(postsDirectory, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
-
-  // Ensure only the minimal needed data is exposed
-  // fields.forEach((field) => {
-  //   if (field === 'slug') {
-  //     items[field] = realSlug
-  //   }
-  //   if (field === 'content') {
-  //     items[field] = content
-  //   }
-
-  //   if (typeof data[field] !== 'undefined') {
-  //     items[field] = data[field]
-  //   }
-  // })
 
   return {
     title: data['title'],
@@ -57,6 +43,7 @@ export function getPostBySlug(slug: string, fields: string[] = []): PostData {
       picture: data['author']['picture']},
     coverImage: data['coverImage'],
     date: data['date'],
+    excerpt: data['excerpt'],
     content: content,
   }
 }

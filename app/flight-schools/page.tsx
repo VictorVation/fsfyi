@@ -17,23 +17,25 @@ export default async function FlightSchoolPage() {
     <main>
       <section>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-          {schools?.map(({ name, address, airport }) => (
-            <Link
-              className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
-              href={`/airports/${airport.faa}`}
-              key={name}
-            >
-              <span className="inline-block rounded-lg bg-gray-50 p-3">
-                JFK / KJFK
-              </span>
+          {schools?.map(
+            ({ name, address, airport }) =>
+              airport != null && (
+                <div
+                  className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                  key={name}
+                >
+                  <span className="inline-block rounded-lg bg-gray-50 p-3">
+                    JFK / KJFK
+                  </span>
 
-              <h2 className="mt-2 font-bold">{name}</h2>
+                  <h2 className="mt-2 font-bold">{name}</h2>
 
-              <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-                {address}
-              </p>
-            </Link>
-          ))}
+                  <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
+                    {address}
+                  </p>
+                </div>
+              )
+          )}
         </div>
       </section>
     </main>
