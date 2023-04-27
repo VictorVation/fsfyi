@@ -18,18 +18,30 @@ export default function Nav() {
             aria-label="Site Nav"
             className="hidden gap-8 text-sm font-medium md:flex"
           >
-            <Link className="text-gray-500" href="/airports">
-              Airports
-            </Link>
-            <Link className="text-gray-500" href="/flight-schools">
-              Flight Schools
-            </Link>
-            <Link className="text-gray-500" href="posts">
+            <Link
+              className="text-gray-500 hover:text-gray-800 hover:underline"
+              href="/articles"
+            >
               Articles
+              <span className="whitespace-nowrap rounded-full bg-purple-100 ml-1 px-2.5 py-0.5 text-sm text-purple-700">
+                New!
+              </span>
+            </Link>
+            <Link
+              className="text-gray-500 hover:text-gray-800 hover:underline"
+              href="/flight-schools"
+            >
+              Flight School Reviews
+            </Link>
+            <Link
+              className="text-gray-500 hover:text-gray-800 hover:underline"
+              href="/airports"
+            >
+              Airports
             </Link>
           </nav>
 
-          <div className="hidden flex-1 items-center justify-end gap-4 sm:flex">
+          <div className="hidden flex-1 items-center justify-end gap-1 sm:flex">
             <Link
               className="rounded-lg bg-gray-100 px-5 py-2 text-sm font-medium text-gray-500"
               href=""
@@ -38,7 +50,7 @@ export default function Nav() {
             </Link>
 
             <Link
-              className="rounded-lg bg-blue-600 px-5 py-2 text-sm font-medium text-white"
+              className="rounded-lg bg-sky-500 px-5 py-2 text-sm font-medium text-white"
               href=""
             >
               Sign up

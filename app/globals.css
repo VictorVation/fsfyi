@@ -17,3 +17,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+
+.hyperlink {
+  @apply text-blue-600 underline
+}
+
+.hyperlink:visited {
+  @apply text-purple-600
+}

@@ -24,26 +24,44 @@ export default async function HomePage() {
             </h2>
 
             <p className="mt-4 text-gray-600">
-              Whether you're a seasoned pilot or just starting your journey in
-              the skies, our platform offers a wealth of information and
+              Whether you&apos;re a seasoned pilot or just starting your journey
+              in the skies, our platform offers a wealth of information and
               resources to help you soar to new heights.
             </p>
 
             <Link
-              href="/posts"
-              className="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+              className="mt-8 group relative inline-flex items-center overflow-hidden rounded bg-sky-500 px-8 py-3 text-white focus:outline-none focus:ring active:bg-sky-400"
+              href="/articles"
             >
-              Read Latest Articles
+              <span className="absolute -end-full transition-all group-hover:end-4">
+                <svg
+                  className="h-5 w-5 rtl:rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </span>
+
+              <span className="text-sm font-medium transition-all group-hover:me-4">
+                Read Latest Articles
+              </span>
             </Link>
           </div>
 
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
             {airports?.map((airport) => (
-              <AirportCard airport={airport} />
+              <AirportCard airport={airport} key={airport.id} />
             ))}
           </div>
         </div>
-        {/* </div> */}
       </section>
     </main>
   );

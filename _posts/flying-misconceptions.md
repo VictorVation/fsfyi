@@ -1,13 +1,13 @@
 ---
 title: "The Surprising Truth About Learning to Fly: Five Common Misconceptions"
 excerpt: "You may have heard all kinds of stories, rumors, and myths about the process of learning to fly, and it's not always easy to know what to believe. In this post, we will debunk the most common misconceptions about learning to fly and show you how easy and enjoyable it can be."
-coverImage: "/assets/blog/runway.jpg"
+coverImage: "/assets/blog/prop-plane.jpg"
 date: "2022-03-16T05:35:07.322Z"
 author:
   name: FlightSchool FYI
   picture: "/assets/blog/authors/fsfyi.png"
 ogImage:
-  url: "/assets/blog/runway.jpg"
+  url: "/assets/blog/prop-plane.jpg"
 ---
 
 Learning to fly is a dream for many people, but it can also seem daunting, especially if you have never flown before. You may have heard all kinds of stories, rumors, and myths about the process of learning to fly, and it's not always easy to know what to believe. In this post, we will debunk the most common misconceptions about learning to fly and show you how easy and enjoyable it can be.
