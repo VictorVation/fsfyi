@@ -2,6 +2,7 @@ import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
 import Author from '@/interfaces/author'
+import PostType from '@/interfaces/post'
 
 const postsDirectory = join(process.cwd(), '_posts')
 
@@ -29,7 +30,7 @@ export function getPostSlugs() {
 //   content: string,
 // }
 
-export function getPostBySlug(slug: string, fields: string[] = []): Post {
+export function getPostBySlug(slug: string, fields: string[] = []): PostType {
   const realSlug = slug.replace(/\.md$/, '')
   const fullPath = join(postsDirectory, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -45,6 +46,7 @@ export function getPostBySlug(slug: string, fields: string[] = []): Post {
     date: data['date'],
     excerpt: data['excerpt'],
     content: content,
+    ogImage: data['ogImage'],
   }
 }
 
