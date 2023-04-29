@@ -23,7 +23,10 @@ export default async function ArticlePage({ params }: Props) {
           author={postData.author}
         />
         <PostBody content={content} />
-        <Link className="text-sky-500 underline text-sm" href={"/articles"}>
+        <Link
+          className="text-sky-500 underline text-sm py-4"
+          href={"/articles"}
+        >
           ← Back to All Articles
         </Link>
       </article>
@@ -31,7 +34,7 @@ export default async function ArticlePage({ params }: Props) {
   );
 }
 
-// export async function getStaticPaths() {
+// export async function getStaticParamss() {
 //   const posts = getAllPosts(["slug"]);
 
 //   return {
