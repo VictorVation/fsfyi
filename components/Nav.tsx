@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import classnames from "classnames";
 import { useState } from "react";
@@ -102,7 +100,7 @@ export default function NavPage() {
 
           <div className="lg:hidden">
             <button
-              className="rounded-lg bg-gray-100 p-2 text-gray-600"
+              className="rounded-lg bg-gray-100 p-2 text-gray-600 w-10 h-10"
               type="button"
               onClick={() => setIsMenuOpen((isOpen: boolean) => !isOpen)}
             >

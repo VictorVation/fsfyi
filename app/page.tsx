@@ -5,6 +5,11 @@ import { Database } from "@/lib/database.types";
 import AirportCard from "@/components/AirportCard";
 import Link from "next/link";
 
+export const metadata = {
+  title: "FlightSchool.fyi",
+  description: "Discover the freedom of aviation",
+};
+
 export default async function HomePage() {
   const supabase = createServerComponentSupabaseClient<Database>({
     headers,
