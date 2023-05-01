@@ -6,8 +6,9 @@ import AirportCard from "@/components/AirportCard";
 import Link from "next/link";
 
 export const metadata = {
-  title: "FlightSchool.fyi",
-  description: "Discover the freedom of aviation",
+  title: "FlightSchool.fyi: From ground school to the flight deck",
+  description:
+    "Your comprehensive guide for learning to fly, from ground school to the flight deck.",
 };
 
 export default async function HomePage() {

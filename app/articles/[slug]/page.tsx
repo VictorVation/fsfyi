@@ -11,7 +11,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props) {
   const postData = getPostBySlug(params.slug);
-  const title = `${postData.title} | flightschool.fyi Articles`;
+  const title = `${postData.title} | FlightSchool.fyi Articles`;
   const description = postData.excerpt;
   return {
     title,

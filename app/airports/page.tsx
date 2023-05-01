@@ -3,6 +3,10 @@ import { createServerComponentSupabaseClient } from "@supabase/auth-helpers-next
 import { Database } from "@/lib/database.types";
 import AirportCard from "@/components/AirportCard";
 
+export const metadata = {
+  title: "Airports | FlightSchool.fyi",
+};
+
 export default async function AirportsPage() {
   const supabase = createServerComponentSupabaseClient<Database>({
     headers,

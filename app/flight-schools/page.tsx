@@ -1,7 +1,10 @@
 import { headers, cookies } from "next/headers";
 import { createServerComponentSupabaseClient } from "@supabase/auth-helpers-nextjs";
 import { Database } from "@/lib/database.types";
-import Link from "next/link";
+
+export const metadata = {
+  title: "Flight Schools | FlightSchool.fyi",
+};
 
 export default async function FlightSchoolPage() {
   const supabase = createServerComponentSupabaseClient<Database>({

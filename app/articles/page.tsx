@@ -2,6 +2,12 @@ import MoreStories from "@/components/posts/more-stories";
 import HeroPost from "@/components/posts/hero-post";
 import { getAllPosts } from "@/lib/api";
 
+export const metadata = {
+  title: "Articles | FlightSchool.fyi",
+  description:
+    "Articles from the FlightSchool FYI team about flight schools, learning to fly, and becoming a pilot.",
+};
+
 export default async function ArticlesPage() {
   const allPosts = getAllPosts([
     "title",
