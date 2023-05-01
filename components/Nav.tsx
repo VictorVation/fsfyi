@@ -1,6 +1,69 @@
-import Link from "next/link";
+"use client";
 
-export default function Nav() {
+import Link from "next/link";
+import classnames from "classnames";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
+
+type NavItemType = {
+  label: string;
+  href: string;
+  badge?: JSX.Element;
+};
+
+const NavItems: NavItemType[] = [
+  {
+    label: "Articles",
+    href: "/articles",
+    badge: (
+      <span className="whitespace-nowrap rounded-full bg-purple-100 ml-1 px-2.5 py-0.5 text-sm text-purple-700">
+        New!
+      </span>
+    ),
+  },
+  {
+    label: "Flight School Reviews",
+    href: "/flight-schools",
+  },
+  {
+    label: "Airports",
+    href: "/airports",
+  },
+];
+
+type NavItemsRendererProps = {
+  listClass: string;
+  itemClass: string;
+};
+function NavItemsRenderer({ itemClass, listClass }: NavItemsRendererProps) {
+  const pathname = usePathname();
+
+  return (
+    <ul className={listClass}>
+      {NavItems.map(({ label, href, badge }) => (
+        <Link
+          className={classnames(
+            pathname === href
+              ? "text-sky-500"
+              : "hover:underline text-gray-500 hover:text-gray-800",
+            itemClass
+          )}
+          href={href}
+          key={label}
+        >
+          {label} {badge}
+        </Link>
+      ))}
+    </ul>
+  );
+}
+
+export default function NavPage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header aria-label="Site Header" className="shadow-sm">
       <div className="mx-auto max-w-screen-xl p-4">
@@ -14,31 +77,11 @@ export default function Nav() {
             </Link>
           </div>
 
-          <nav
-            aria-label="Site Nav"
-            className="hidden gap-8 text-sm font-medium md:flex"
-          >
-            <Link
-              className="text-gray-500 hover:text-gray-800 hover:underline"
-              href="/articles"
-            >
-              Articles
-              <span className="whitespace-nowrap rounded-full bg-purple-100 ml-1 px-2.5 py-0.5 text-sm text-purple-700">
-                New!
-              </span>
-            </Link>
-            <Link
-              className="text-gray-500 hover:text-gray-800 hover:underline"
-              href="/flight-schools"
-            >
-              Flight School Reviews
-            </Link>
-            <Link
-              className="text-gray-500 hover:text-gray-800 hover:underline"
-              href="/airports"
-            >
-              Airports
-            </Link>
+          <nav aria-label="Site Nav">
+            <NavItemsRenderer
+              itemClass={""}
+              listClass={"hidden gap-8 text-sm font-medium md:flex"}
+            />
           </nav>
 
           <div className="hidden flex-1 items-center justify-end gap-1 sm:flex">
@@ -61,25 +104,34 @@ export default function Nav() {
             <button
               className="rounded-lg bg-gray-100 p-2 text-gray-600"
               type="button"
+              onClick={() => setIsMenuOpen((isOpen: boolean) => !isOpen)}
             >
               <span className="sr-only">Open menu</span>
-              <svg
-                aria-hidden="true"
-                className="h-5 w-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 6h16M4 12h16M4 18h16"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+              {isMenuOpen ? (
+                <FontAwesomeIcon icon={faXmark} />
+              ) : (
+                <FontAwesomeIcon icon={faBars} />
+              )}
             </button>
           </div>
+        </div>
+        <div className="w-full md:hidden md:w-auto">
+          <nav
+            aria-label="Site Nav"
+            className={classnames(
+              isMenuOpen ? "visible" : "hidden",
+              "gap-8 text-sm font-medium md:flex"
+            )}
+          >
+            <NavItemsRenderer
+              listClass={
+                "flex flex-col font-medium mt-4 rounded-lg border-gray-50 dark:bg-gray-800 dark:border-gray-700"
+              }
+              itemClass={
+                "block py-2 pl-3 pr-4 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              }
+            />
+          </nav>
         </div>
       </div>
     </header>

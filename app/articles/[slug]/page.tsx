@@ -34,17 +34,10 @@ export default async function ArticlePage({ params }: Props) {
   );
 }
 
-// export async function getStaticParamss() {
-//   const posts = getAllPosts(["slug"]);
+export async function generateStaticParams() {
+  const posts = getAllPosts(["slug"]);
 
-//   return {
-//     paths: posts.map((post) => {
-//       return {
-//         params: {
-//           slug: post.slug,
-//         },
-//       };
-//     }),
-//     fallback: false,
-//   };
-// }
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
