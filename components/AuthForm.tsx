@@ -62,7 +62,7 @@ export default function AuthForm({ surface }: AuthFormProps) {
               ? "Adding you to the waitlist ..."
               : "Sending magic link, check your email to sign in",
             confirmation_text: isSignup
-              ? "Click the link in your email so you hear as soon as we launch!"
+              ? "Confirm your position in the list by clicking the link in your email!"
               : "Check your email for the magic link to sign in",
           },
         },

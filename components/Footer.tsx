@@ -31,14 +31,14 @@ export default function Footer() {
                 </Link>
               </li>
 
-              <li>
+              {/* <li>
                 <Link
                   className="text-gray-700 transition hover:text-gray-700/75"
                   href="/airports"
                 >
                   Airports
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </div>

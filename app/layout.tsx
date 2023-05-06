@@ -4,6 +4,10 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { Inter } from "next/font/google";
 
 import "./globals.css";
+import NavBar from "@/components/Nav/NavBar";
+import SiteLogo from "@/components/Nav/SiteLogo";
+import { NavItems } from "@/components/Nav/NavItemsRenderer";
+import MobileNav from "@/components/Nav/MobileNav";
 
 config.autoAddCss = false;
 

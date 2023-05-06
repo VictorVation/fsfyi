@@ -24,10 +24,10 @@ export const NavItemsData: NavItemType[] = [
     label: "Flight School Reviews",
     href: "/flight-schools",
   },
-  {
-    label: "Airports",
-    href: "/airports",
-  },
+  // {
+  //   label: "Airports",
+  //   href: "/airports",
+  // },
 ];
 
 type NavItemsRendererProps = {
