@@ -15,17 +15,17 @@ export default async function Identity() {
   ) : (
     <div className="hidden flex-1 items-center justify-end gap-1 sm:flex">
       <Link
-        className="rounded-lg bg-gray-100 px-5 py-2 text-sm font-medium text-gray-500"
+        className="rounded-lg bg-gray-100 px-5 py-2 text-sm font-medium text-gray-500 cursor-pointer"
         href="/login"
       >
         Log in
       </Link>
 
       <Link
-        className="rounded-lg bg-sky-500 px-5 py-2 text-sm font-medium text-white"
+        className="rounded-lg bg-sky-500 px-5 py-2 text-sm font-medium text-white cursor-pointer"
         href="signup"
       >
-        Sign up
+        Join The Waitlist
       </Link>
     </div>
   );

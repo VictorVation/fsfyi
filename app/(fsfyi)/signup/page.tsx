@@ -1,6 +1,12 @@
 import AuthForm from "@/components/AuthForm";
 import SupabaseProvider from "@/lib/SupabaseProvider";
 
+export const metadata = {
+  title: "Join The Waitlist | FlightSchool.fyi",
+  description:
+    "Your comprehensive guide for learning to fly, from ground school to the flight deck.",
+};
+
 export default function LoginPage() {
   return (
     <section className="flex flex-col text-center items-center max-w-lg">

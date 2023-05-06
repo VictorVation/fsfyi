@@ -5,13 +5,26 @@ export default function FlightSchoolComingSoonPage() {
   return (
     <section className="flex flex-col text-center items-center max-w-lg">
       <aside>
-        <h1 className="text-3xl sm:text-4xl">Landing soon!</h1>
+        <h1 className="text-3xl sm:text-4xl">
+          Coming soon: Real reviews from flight students
+        </h1>
 
-        <p className="mt-4 text-gray-600">
-          Join our waitlist today for exclusive access to our platform. Looking
-          to take your passion for aviation to new heights? Whether you&apos;re
-          a seasoned pilot or just starting out, FlightSchool.fyi is the perfect
-          resource to help you achieve your aviation goals.
+        <p className="mt-8 text-gray-600">
+          We're getting ready for takeoff on our flight review platform, and it
+          will be ready soon! If you want to keep up to date and know as soon as
+          we're launching, sign up for the waitlist below!
+        </p>
+
+        <p className="mt-4 text-sm text-gray-600">
+          Are you a current or former flight student and want to leave a review?
+          Jump the line by emailing us at{" "}
+          <a
+            className="text-sky-500 hover:underline"
+            href="reviews@flightschool.fyi"
+          >
+            reviews@flightschool.fyi
+          </a>
+          .
         </p>
       </aside>
       <section className="mt-8">
@@ -28,6 +41,8 @@ export default function FlightSchoolComingSoonPage() {
 
 export const metadata = {
   title: "Flight School Reviews | FlightSchool.fyi",
+  description:
+    "Your comprehensive guide for learning to fly, from ground school to the flight deck.",
 };
 
 // export default async function FlightSchoolPage() {
