@@ -1,4 +1,3 @@
-import Identity from "@/components/Nav/Identity";
 import MobileNav from "@/components/Nav/MobileNav";
 import NavBar from "@/components/Nav/NavBar";
 import { NavItems } from "@/components/Nav/NavItemsRenderer";
@@ -19,7 +18,6 @@ export default function RootLayout({
           listClass={"hidden gap-8 text-sm font-medium md:flex"}
         />
         <MobileNav />
-        <Identity />
       </NavBar>
       <section
         className={`flex flex-col items-center justify-between lg:p-24 md:p-12 pt-8 px-8`}
