@@ -9,6 +9,7 @@ export const metadata = {
   title: "FlightSchool.fyi: From ground school to the flight deck",
   description:
     "Your comprehensive guide for learning to fly, from ground school to the flight deck.",
+  // FlightSchool.fyi is here to help!
 };
 
 export default async function HomePage() {
@@ -20,56 +21,54 @@ export default async function HomePage() {
   const { data: airports } = await supabase.from("airports").select("*");
 
   return (
-    <main>
-      <section>
-        {/* <div className="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16"> */}
-        <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16">
-          <div className="mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right">
-            <h2 className="text-3xl font-bold sm:text-4xl">
-              Discover the freedom of aviation.
-            </h2>
+    <section>
+      {/* <div className="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16"> */}
+      <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16">
+        <div className="mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right">
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            Discover the freedom of aviation.
+          </h2>
 
-            <p className="mt-4 text-gray-600">
-              Whether you&apos;re a seasoned pilot or just starting your journey
-              in the skies, our platform offers a wealth of information and
-              resources to help you soar to new heights.
-            </p>
+          <p className="mt-4 text-gray-600">
+            FlightSchool.fyi is your ticket to the skies! We offer everything
+            you need to know about flight schools, from ratings and reviews to
+            informative articles about flight training and aviation.
+          </p>
 
-            <Link
-              className="mt-8 group relative inline-flex items-center overflow-hidden rounded bg-sky-500 px-8 py-3 text-white focus:outline-none focus:ring active:bg-sky-400"
-              href="/articles"
-            >
-              <span className="absolute -end-full transition-all group-hover:end-4">
-                <svg
-                  className="h-5 w-5 rtl:rotate-180"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </span>
+          <Link
+            className="mt-8 group relative inline-flex items-center overflow-hidden rounded bg-sky-500 px-8 py-3 text-white focus:outline-none focus:ring active:bg-sky-400"
+            href="/articles"
+          >
+            <span className="absolute -end-full transition-all group-hover:end-4">
+              <svg
+                className="h-5 w-5 rtl:rotate-180"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </span>
 
-              <span className="text-sm font-medium transition-all group-hover:me-4">
-                Read Latest Articles
-              </span>
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-            {airports?.map((airport) => (
-              <AirportCard airport={airport} key={airport.id} />
-            ))}
-          </div>
+            <span className="text-sm font-medium transition-all group-hover:me-4">
+              Read Latest Articles
+            </span>
+          </Link>
         </div>
-      </section>
-    </main>
+
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+          {airports?.map((airport) => (
+            <AirportCard airport={airport} key={airport.id} />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 

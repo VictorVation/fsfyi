@@ -1,5 +1,5 @@
 ---
-title: "Everything You Need to Know About Instrument Ratings : Take Flight at Night"
+title: "Everything You Need to Know About Instrument Ratings: Take Flight at Night"
 excerpt: "Flying a plane is a dream for many people, but it takes more than just a passion for aviation to become a pilot. In this article, we'll give you an introduction to the most common pilot licenses in the order they're obtained in."
 coverImage: "/assets/blog/nightflight.jpg"
 date: "2022-03-16T05:35:07.322Z"

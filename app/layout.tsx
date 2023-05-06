@@ -1,6 +1,5 @@
-"use client";
 import Footer from "@/components/Footer";
-import Nav from "@/components/Nav";
+import NavBar from "@/components/Nav/NavBar";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { Inter } from "next/font/google";
@@ -23,12 +22,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Nav />
-        <div
-          className={`flex min-h-screen flex-col items-center justify-between lg:p-24 md:p-12 pt-8 px-8`}
-        >
-          {children}
-        </div>
+        <main className="min-h-screen">
+          {/* @ts-expect-error Async Server Component */}
+          <NavBar />
+          <section
+            className={`flex flex-col items-center justify-between lg:p-24 md:p-12 pt-8 px-8`}
+          >
+            {children}
+          </section>
+        </main>
         <Footer />
       </body>
     </html>

@@ -12,7 +12,6 @@ type Props = {
 };
 
 const PostHeader = ({ title, coverImage, date, author }: Props) => {
-  console.log(coverImage);
   return (
     <>
       <PostTitle>{title}</PostTitle>
