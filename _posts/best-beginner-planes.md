@@ -1,13 +1,13 @@
 ---
 title: "Get Your Wings: These Are The Best Planes for New Pilots"
 excerpt: "One of the first decisions you will need to make as a student pilot is which type of aircraft to learn to fly on. Each type of plane has its pros and cons, and the decision ultimately depends on your personal preferences and goals. In this article, we will explore the most common types of aircraft to learn to fly on and the advantages and disadvantages of each."
-coverImage: "/assets/blog/cessna.jpg"
+coverImage: "/assets/blog/cessna-sm.jpg"
 date: "2022-03-16T05:35:07.322Z"
 author:
   name: FlightSchool FYI
   picture: "/assets/blog/authors/fsfyi.png"
 ogImage:
-  url: "/assets/blog/cessna.jpg"
+  url: "/assets/blog/cessna-sm.jpg"
 ---
 
 As an aspiring pilot, choosing the right aircraft to begin your flight training is crucial. But, with a variety of options available, it can be overwhelming to decide which one to pick. While many popular aircraft might seem like the go-to choice for beginners, the truth is that the best plane for novice pilots might not be what you think.

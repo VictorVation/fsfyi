@@ -4,7 +4,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classnames from "classnames";
 import { useState } from "react";
-import { NavItemsRenderer } from "./NavItemsRenderer";
+import { NavItems } from "./NavItemsRenderer";
 
 export default function MobileNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,22 +26,15 @@ export default function MobileNav() {
       </div>
       {/* flexbox breaker so menu renders on following line */}
       <div className="lg:hidden basis-full h-0 w-0" />
-      <nav
-        aria-label="Site Nav"
-        className={classnames(
+      <NavItems
+        listClass={classnames(
           isMenuOpen ? "visible" : "hidden",
-          "gap-8 text-md font-bold w-full lg:hidden"
+          "text-md font-bold w-full lg:hidden flex flex-col font-medium mt-4 rounded-lg border-gray-50 dark:bg-gray-800 dark:border-gray-700"
         )}
-      >
-        <NavItemsRenderer
-          listClass={
-            "flex flex-col font-medium mt-4 rounded-lg border-gray-50 dark:bg-gray-800 dark:border-gray-700"
-          }
-          itemClass={
-            "block py-2 px-4 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-          }
-        />
-      </nav>
+        itemClass={
+          "block py-2 px-4 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+        }
+      />
     </>
   );
 }

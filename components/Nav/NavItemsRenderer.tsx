@@ -10,7 +10,7 @@ type NavItemType = {
   badge?: JSX.Element;
 };
 
-export const NavItems: NavItemType[] = [
+export const NavItemsData: NavItemType[] = [
   {
     label: "Articles",
     href: "/articles",
@@ -34,28 +34,26 @@ type NavItemsRendererProps = {
   listClass: string;
   itemClass: string;
 };
-export function NavItemsRenderer({
-  itemClass,
-  listClass,
-}: NavItemsRendererProps) {
+export function NavItems({ itemClass, listClass }: NavItemsRendererProps) {
   const pathname = usePathname();
-
   return (
-    <ul className={listClass}>
-      {NavItems.map(({ label, href, badge }) => (
-        <Link
-          className={classnames(
-            pathname === href
-              ? "text-sky-500"
-              : "hover:underline text-gray-500 hover:text-gray-800",
-            itemClass
-          )}
-          href={href}
-          key={label}
-        >
-          {label} {badge}
-        </Link>
-      ))}
-    </ul>
+    <nav aria-label="Site Nav">
+      <ul className={listClass}>
+        {NavItemsData.map(({ label, href, badge }) => (
+          <Link
+            className={classnames(
+              pathname === href
+                ? "text-sky-500"
+                : "hover:underline text-gray-500 hover:text-gray-800",
+              itemClass
+            )}
+            href={href}
+            key={label}
+          >
+            {label} {badge}
+          </Link>
+        ))}
+      </ul>
+    </nav>
   );
 }

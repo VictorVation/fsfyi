@@ -20,8 +20,8 @@ export default async function ArticlesPage() {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   return (
-    <>
-      <section className="flex-col md:flex-row flex items-center md:justify-between mb-16 md:mb-12">
+    <div className="max-w-screen-xl">
+      <section className="flex flex-col md:flex-row items-center md:justify-between mb-16 md:mb-12">
         <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8">
           Latest Articles
         </h1>
@@ -40,6 +40,6 @@ export default async function ArticlesPage() {
         />
       )}
       {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-    </>
+    </div>
   );
 }

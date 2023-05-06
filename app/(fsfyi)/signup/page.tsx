@@ -11,8 +11,8 @@ export default function LoginPage() {
           <p className="mt-4 text-gray-600">
             Join our waitlist today for exclusive access to our platform.
             Looking to take your passion for aviation to new heights? Whether
-            you're a seasoned pilot or just starting out, FlightSchool.fyi is
-            the perfect resource to help you achieve your aviation goals.
+            you&apos;re a seasoned pilot or just starting out, FlightSchool.fyi
+            is the perfect resource to help you achieve your aviation goals.
           </p>
         </aside>
         <section className="mt-8">
