@@ -10,9 +10,9 @@ export default function FlightSchoolComingSoonPage() {
         </h1>
 
         <p className="mt-8 text-gray-600">
-          We're getting ready for takeoff on our flight review platform, and it
-          will be ready soon! If you want to keep up to date and know as soon as
-          we're launching, sign up for the waitlist below!
+          We&apos;re getting ready for takeoff on our flight review platform,
+          and it will be ready soon! If you want to keep up to date and know as
+          soon as we&apos;re launching, sign up for the waitlist below!
         </p>
 
         <p className="mt-4 text-sm text-gray-600">
