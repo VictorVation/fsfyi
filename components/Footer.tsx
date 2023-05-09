@@ -25,7 +25,7 @@ export default function Footer() {
               <li>
                 <Link
                   className="text-gray-700 transition hover:text-gray-700/75"
-                  href="/schools"
+                  href="/flight-schools"
                 >
                   Flight School Reviews
                 </Link>
